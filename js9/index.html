@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #submit{
+            background: url(R.png);
+            background-size: cover;
+            background-repeat: no-repeat;
+            cursor: pointer;
+            transition: .5s ease all;
+        }
+        #submit:hover{
+            transform: scale(1.5);
+        }
+         </style>
+</head>
+<body>
+    <header class="head">
+        <h1>this is a heading</h1>
+    </header>
+    <main class="container">
+        <h2>hey there i am lerning vanila javascript</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi, fuga?</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi, fuga?</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi, fuga?</p>
+        <button class="btn">click me</button>
+        <form action="">
+            <input type="text">
+            <input type="email">
+            <input type="submit" value="login" id="submit">
+        </form>
+    </main>
+    <script>
+        let head = document.querySelector('.head')
+        let container = document.querySelector('.container')
+        let btn = document.querySelector('.btn')
+        // head.attributes;
+        head.innerHTML = '<button>click me and see magic</button>';
+       let headChilds = head.children[0]   ;
+        headChilds.addEventListener('click', ()=>{
+            confirm('do you want to procced?????')
+        })
+        console.log(headChilds)
+        let a = 1;
+        let b = 4 ;
+        document.write(a+b);
+        document.write(a*b);
+        document.write(a/b);
+        document.write(a-b);
+        document.write(a%b);
+        // shorthand 
+        a +=1; 
+        document.write(a%b);
+        document.write('<br> <br> <br>')
+        let x = 22;
+        let y = 7;
+        z= x/y;
+        document.write(z)
+        document.write('<br> <br> <br>')
+         z = z.toFixed(3)
+        document.write(z)
+        // z = parseFloat(z)
+        z = Number(z)
+        console.log(z)
+        // condition 
+        a = 3;
+        b = 4;
+        c = 8
+        document.write('<br><br>')
+        if (a > b && a > c ) {
+            document.write(`${a} is largest number  `);
+        }else if (b > a && b > c ) {
+            document.write(`${b} is largest number  `);
+        }else{
+            document.write(`${c} is largest number  `);
+        }
+        document.write('<br><br>')
+        // for loop 
+        document.write('<br><br>')
+        // function with peramitter 
+        let helow = (fname = 'shaharul', lname = 'siyam') =>{
+            fulname = `helow ${fname} ${lname}`;
+            return fulname;
+        }
+        document.write(helow('siyam', 'sorkar' +'<br>'));
+
+        let sumnum = (no1 = '0', no2 = '0') =>{
+            sum = no1+no2;
+            return sum;
+        }
+        document.write(sumnum(50,23 ))
+        document.write("<br>")
+        for (let a = 1; a <= 100; a+=10) {
+            for (let b = a; b <a+10; b++) {
+                document.write(b+' ')
+            }
+            document.write('<br>')
+        }
+        document.write("<br>")
+        a = 29;
+        while(a<=43){
+            document.write(a+' ,')
+            a++;
+        }
+        document.write('<br>')
+        let color = 'green';
+        switch (color) {
+            case 'red':
+                document.write('dont crose the road ')
+                break;
+            case 'yollow':
+                document.write('get ready to crose the road')
+                break;
+                case 'green':
+                    document.write('crose the road')
+                 break;
+            default:'tme jekhane thako sekhane road crose korar jonno konno light er proyojon nei tomra ondhokarei road crose korte paro'
+                break;
+        }
+    
+    let ary =[93,45,34,87,34,98,23,56,78,24];
+    let nestedary = [
+        ['siyam',21,'bogra'],
+        ['roky',27,'pabna'],
+        ['sabbir',21,'pabna'],
+        ['abrar',22,'pabna']
+    ] 
+    document.write('<br>')
+        ary.push(111);
+        document.write(ary);
+        document.write('<br>');
+        ary.pop();
+        document.write(ary);
+        document.write('<br>');
+        ary.unshift(111);
+        document.write(ary);
+        document.write('<br>');
+        ary.shift()
+        document.write(ary);
+        document.write('<br>');
+        aryjoin = ary.join(' and ')
+        document.write(aryjoin);
+        document.write('<br>');
+        aryconcat = ary.concat(ary,aryjoin)
+        document.write(aryconcat);
+        document.write('<br>');
+        ary.splice(2,0,'value added');
+         document.write(ary);
+         document.write('<br>');
+        // advanced way to concat 
+        advanceconcat =[...ary , aryjoin]
+        document.write(advanceconcat);
+        document.write('<br>');
+        aryFilter = ary.filter(oldage);
+        function oldage(oldages){
+            return oldages > 40;
+        }
+        document.write(aryFilter);
+        document.write('<br>');
+        let name = 'siyam';
+        let subject = 'math , physics chemistry bngla englis socialSciencc';
+        let array3 = [93,45,34,87,34,98,23,56,78,24];
+        let passNumber = (name, subject, ...args)=>{
+            passmark = [];
+            for (let i in args) {
+                if (args[i]>40) {
+                    passmark.push(args[i]);
+                }
+            }
+            return (`${name} ${subject} ${passmark}`)
+        }
+        let resultquerry = passNumber(name, subject, ...array3);
+        document.write(resultquerry);
+        for (let i = 0; i < nestedary.length; i++) {
+                for (let x = 0; x < nestedary[i].length; x++) {
+                    document.write(nestedary[i][x]+' ')
+                    
+                }
+                document.write('<br>');
+        };
+        ary.forEach((value,index) => {
+            document.write(`${index}:${value} <br>`)
+        });
+        document.write('<br>');
+        nestedary.forEach((value,index) => {
+            document.write(`${index} : ${value} <br>`)
+        });
+        let firstObj = {
+            fname :'siyam',
+            lname:'sorkar',
+            collage:['pabna polytechnic institute','pabna'],
+            fullnam:function fulname() {
+                return this.fname +' '+ this.lname
+            }
+        }
+        firstObj.address = ['gabtoli','bogra','bangladesh'];
+        document.write(firstObj.fullnam());
+        document.write(firstObj.address);
+        document.write('<br>');
+        // new ay to create Object 
+        let person = new Object ;
+        person.name = 'shaharul siyam';
+        person.address = 'gabtoli bogra bangladesh'
+        document.write(person.name +' '+ person.address);
+        // string mathod 
+        let aboutSiyam = 'my name is siyam i am a web developer';
+        document.write('<br>');
+        document.write(aboutSiyam.length)
+        let siyam = aboutSiyam.toLocaleUpperCase();
+        document.write(siyam +'<br>')
+
+        let Dates = new Date();
+        Dates = Dates.toDateString();
+        document.write(Dates);
+
+    </script>
+</body>
+</html>

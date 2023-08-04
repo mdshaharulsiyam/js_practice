@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="outer">
+        <h2>Lorem ipsum dolor sit amet.</h2>
+        <div id="inner">
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Amet, id laborum temporibus consectetur atque molestias!</p>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Amet, id laborum temporibus consectetur atque molestias!</p>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Amet, id laborum temporibus consectetur atque molestias!</p>
+        </div>
+    </div>
+    <script>
+       let outer = document.getElementById('outer');
+       nodes = outer.childNodes;
+       let inner = document.getElementById('inner');
+       let newelement = document.createElement('h2');
+       let newtextnode = document.createTextNode('textnode is created ');
+       outer.insertBefore(newtextnode, outer.childNodes[2]),
+    //    outer.appendChild(newelement)
+       console.log(nodes)
+    </script>
+</body>
+</html>

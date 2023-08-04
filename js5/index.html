@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+ .div{
+    width: 300px;
+    height: 500px;
+    background-color: greenyellow;
+    left: 50%;
+    transform: translateX(-50%);
+    position: absolute;
+    top: -10000px;
+    /* display: none; */
+    transition: .4s ease all;
+ }
+ .fadein{
+    top: 100px;
+    /* display: block; */
+    /* transition: 1s ease all; */
+ }
+</style>
+<body>
+    <header id="head">
+        <h1>Lorem ipsum dolor sit amet consectetur adipisicing elit.</h1>
+        <h2>Lorem ipsum dolor sit amet consectetur adipisicing elit.</h2>
+    </header>
+    <div class="div">
+
+    </div>
+    <button class="btn">button</button>
+    <script>
+        var head = document.querySelector('#head');
+        head.innerHTML = '<a href="#">aded</a>';
+        var btn = document.querySelector('.btn');
+        btn.addEventListener('click', ()=>{
+           let div = document.querySelector('.div');
+           div.classList.toggle('fadein')
+        })
+        console.log(head)
+    </script>
+
+</body>
+</html>

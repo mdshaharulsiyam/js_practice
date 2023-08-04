@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        a = 10;
+        while(a<100){
+            document.write(a + '<br>');
+            a+=10;
+        }
+        for (let i = 0; i < 10; i++) {
+            document.write(i + ' ' +'<br>')
+            
+        }
+        for (var a = 0; a <= 100; a+=10) {
+           for (var b = a; b < a+10; b++) {
+            document.write(b)
+           }
+            document.write('<br>')
+        }
+        var a = [38, 49, 39,96, 65, 76, 76,]
+        for (var i in a) {
+            document.write(a[i])
+            document.write('<br>')
+        }
+        ary = [
+            ['siyam', 21, 'bogra'],
+            ['siyam', 21, 'bogra'],
+            ['siyam', 21, 'bogra'],
+            ['siyam', 21, 'bogra'],
+            ['siyam', 21, 'bogra'],
+        ]
+        for (a = 0; a < ary.length; a++) {
+           for ( b = 0; b < ary[a].length; b++) {
+            document.write(ary[a][b] +' ')
+           }
+           document.write('<br>')
+        }
+    </script>
+</body>
+</html>

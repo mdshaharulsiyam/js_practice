@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        obj = {
+            fname : 'siyam',
+            lname : 'sorkar',
+            address : ['sabeckpara', 'gabtoli', 'bogra'],
+            fulname : function(){
+                return this.fname + ' ' + this.lname ;
+            }
+        }
+        document.write(obj.address + '<br>');
+        document.write(obj.address[2] + '<br>');
+        document.write(obj.fname +'<br>');
+        document.write(obj.fulname() + '<br>');
+        // 2nd way 
+        var aboutParson = new Object;
+        aboutParson.fname = 'siyam';
+        aboutParson.lname = 'sorkar';
+        document.write(aboutParson.fname)
+    </script>
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var a = ['siyam','sabbir','roky','abrar'];
+        var c = [1, 2 ,6 ,5 ,5, 7]
+        document.write(a +'<br>');
+        a.push('toha');
+        document.write(a +'<br>');
+        a.pop();
+        document.write(a +'<br>');
+        a.unshift('shohan');
+        document.write(a +'<br> <br>');
+        a.shift();
+        document.write(a +'<br>');
+        b = a.concat(c)
+        document.write(b +'<br>');
+        b = a.join(' '+'and'+ ' ')
+        document.write(b +'<br> <br>');
+        a = a.slice(1, 3);
+        document.write(a +'<br>');
+        a.splice(1, 0, 'value aded');
+        document.write(a +'<br>');
+        b = a.includes('siyam')
+        document.write(b +'<br>');
+        d = c.filter(pass)
+        function pass(number){
+            return number >3
+        }
+        document.write(d +'<br>');
+    </script>
+</body>
+</html>
