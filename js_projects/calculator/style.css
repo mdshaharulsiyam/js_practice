@@ -1,0 +1,63 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background: rgb(188, 243, 238);
+}
+.container{
+    max-width: 300px;
+    margin: 100px auto;
+    border-radius: 10px;
+    background: rgb(58, 57, 57);
+    padding:4px 20px 20px 20px;
+}
+.display{
+    width: 300px;
+    box-sizing: border-box;
+    padding-top: 5px;
+    padding-bottom: 15px;
+}
+.screen{
+    width: 99%;
+    height: 50px;
+    outline: none;
+    font-size: 24px;
+    font-weight: 900;
+    margin-top: 5px;
+    margin-bottom: 10px;
+}
+.action-btn .buttons{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+}
+.action-btn .buttons .btn_value, 
+.btn_eval,
+.btn_AC,
+.btn_DE{
+    width: 50px;
+    height: 50px;
+    background: rgb(37, 36, 36);
+    color: #FFFF;
+    font-weight: 900;
+    font-size: 24px;
+    cursor: pointer;
+    box-shadow: rgba(50, 199, 236, 0.56) 0px 22px 70px 4px;
+}
+.red{
+    background:rgb(255, 16, 16);
+}
+.yollow{
+    background: rgb(255, 255, 3);
+    color: black;
+}
+.action-btn .buttons .action_color{
+    background: rgb(253, 135, 0);
+}
+.action-btn .buttons .result{
+    background: rgb(231, 226, 226);
+    color: #000;
+}

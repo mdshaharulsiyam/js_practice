@@ -1,0 +1,209 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background: rgb(219, 195, 243);
+}
+.container{
+max-width: 300PX;
+margin: 100px auto;
+/* background: gray; */
+box-sizing: border-box;
+padding:30px 20px;
+box-shadow:0px 3px 6px 3px rgba(211, 224, 152, 0.12),
+		0px 6px 10px 3px rgba(132, 235, 146, 0.22),
+		0px 9px 14px 3px rgba(139, 163, 240, 0.2),
+		0px 18px 16px 6px rgba(0,0,0,0.28);
+border:	1px solid rgba(190, 150, 236, 0.03);
+border-radius:	6px;
+position: relative;
+    overflow: hidden;
+    height: 500px;
+}
+.clock{
+    width: 200px;
+    height: 200px;
+    margin: auto;
+    border-radius: 50%;
+    border: 8px solid rgb(0, 47, 255);
+    box-shadow:12px 14px 12px -7px rgba(107, 167, 219, 0.38),
+		        9px 9px 10px -7px rgba(0,0,0,0.19) inset;
+    background-color: rgb(63,131,191);
+    outline:20px solid rgba(118, 181, 236, 0.33);
+    position: relative;
+}
+.pointer{
+    width: 20px;
+    height: 20px;
+    background: #000;
+    position: absolute;
+    border-radius: 50%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    outline:20px solid rgba(118, 181, 236, 0.33);
+    z-index: 999;
+}
+.times{
+    font-size: 24px;
+    font-weight: bold;
+    position: absolute;
+}
+.times12{
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.times6{
+    bottom:0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.times3{
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.times9{
+    left: 5px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.times10{
+    left: 13px;
+    top: 46px;
+}
+.times11 {
+    left: 42px;
+    top: 12px;
+}
+.times1 {
+    right: 42px;
+    top: 12px;
+}
+.times2{
+    right: 13px;
+    top: 46px;
+}
+.times4{
+    right: 13px;
+    bottom: 46px;
+}
+.times5{
+    right:42px;
+    bottom:12px;
+}
+.times8{
+    left: 13px;
+    bottom: 46px;
+}
+.times7{
+    left:42px;
+    bottom:12px;
+}
+.time_wrapper_S {
+    height: 150px;
+    width: 150px;
+    position: absolute;
+    top: 24px;
+    left: 25.2px;
+}
+.times_secound{
+    position: relative;
+}
+.secound {
+    position: absolute;
+    width: 2px;
+    height: 75px;
+    background: rgb(255, 217, 0);
+    left: 74.5px;
+    border-radius: 50% 50% 0 0;
+}
+.time_wrapper_M {
+    height: 120px;
+    width: 120px;
+    position: absolute;
+    top: 40px;
+    left: 40.5px;
+}
+.times_minute{
+    position: relative;
+}
+.minute {
+    position: absolute;
+    width: 3px;
+    height: 60px;
+    background: rgb(247, 215, 33);
+    left: 59px;
+    border-radius: 50% 50% 0 0;
+}
+.time_wrapper_H {
+    height: 100px;
+    width: 100px;
+    position: absolute;
+    top: 50px;
+    left: 49px;
+}
+.times_hour{
+    position: relative;
+}
+.hour {
+    position: absolute;
+    width: 4px;
+    height: 50px;
+    background: rgb(214, 187, 34);
+    left: 49px;
+    border-radius: 50% 50% 0 0;
+}
+.digital_clock{
+    width: 200px;
+    height:100px;
+    display:flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 0 auto;
+    font-size: 30px;
+    font-weight: bold;
+    box-shadow: 	0px 0px 8px 6px rgba(0,0,0,0.15) inset;
+    border:	1px solid rgba(0,0,0,0.13);
+    border-radius:	5px;
+    position: absolute;
+    top: 2000%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: 1s ease all;
+}
+.analog_clock{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: 1s ease all;
+}
+#btn{
+    cursor: pointer;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    display: none;
+}
+#btn2{
+    cursor: pointer;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+}
+.action_btn{
+    width: 100%;
+    overflow: hidden;
+    margin: 0 auto;
+}
+.action{
+    padding: 10px 20px;
+    font-size: 24px;
+    font-weight: 900;
+    background: rgb(18, 168, 255);
+    border: none;
+    box-shadow: rgb(32, 255, 125) 20px 20px 20px 20px;
+}
