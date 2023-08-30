@@ -1,0 +1,49 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+.tab_menu{
+  max-width: 800px;
+  margin: 200px auto;
+  overflow: hidden;
+  position: relative;
+}
+.icon{
+  width: 40px;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: linear-gradient(#f3f3f3, #e8e9f0);
+  box-sizing: border-box;
+  padding: 10px;
+  cursor: pointer;
+  user-select: none;
+}
+.icon#right{
+  right: 0px;
+}
+.icon#left{
+  display: none;
+}
+.tab-parent{
+  display: flex;
+  gap: 5px;
+  overflow: hidden;
+  /* cursor: grabbing; */
+  scroll-behavior: smooth;
+}
+.tab{
+  list-style-type: none;
+  font-size: 20px;
+  padding: 10px 20px;
+  background: rgb(231, 227, 227);
+  /* margin: 0 5px; */
+  border-radius: 8px;
+  user-select: none;
+}
+.scrollBehave{
+  scroll-behavior:auto;
+}
+.active{
+  background: rgb(95, 95, 236);
+}

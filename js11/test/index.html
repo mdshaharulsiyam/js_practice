@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>test</title>
+</head>
+<body>
+    <h1>this is a simple text</h1>
+    <ul id="items">
+        <li>Lorem, ipsum.</li>
+        <li>Iste, temporibus?</li>
+        <li>Ut, delectus.</li>
+        <li>Eaque, deleniti.</li>
+    </ul>
+    <input id="addItem" type="text">
+    <button id="addBtn">add item</button>
+    <script>
+        let item = document.querySelector('#items');
+        let addItem = document.querySelector('#addItem');
+        let addBtn = document.querySelector('#addBtn');
+        item.addEventListener('click', (e)=>{
+            e.target.parentNode.removeChild(e.target)
+        });
+        addBtn.addEventListener('click',()=>{
+           newItem = addItem.value
+           addItem.value = '';
+        //    console.log(newItem)
+            if (newItem != '') {
+                const li = document.createElement('li');
+                li.innerText = newItem;
+                item.appendChild(li);
+            }else{
+                alert('plese insert a item first')
+            }
+        })
+    </script>
+</body>
+</html>

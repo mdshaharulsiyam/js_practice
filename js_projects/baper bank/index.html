@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>baper bank</title>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@3.5.1/dist/full.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+    <main class="w-1/3 bg-sky-300 mx-auto my-14 text-center p-10">
+        <h2 class="text-3xl">Plese login</h2>
+        <input id="userEmail" class="w-11/12 p-2 my-4 rounded" type="email" placeholder="plese insert your email">
+        <input id="userPassword" class="w-11/12 p-2 my-4 rounded" type="password" placeholder="plese insert your password">
+        <button id="subBtn" class="py-2 px-6 bg-emerald-200 text-xl rounded hover:bg-violet-500">login</button>
+    </main>
+    <script>
+        let email = document.querySelector('#userEmail');
+        let password = document.querySelector('#userPassword');
+        let submitBtn = document.querySelector('#subBtn');
+        submitBtn.addEventListener('click',()=>{
+            emailId = email.value;
+            passwordIs = password.value;
+            if (emailId === 'shaharulsiyam0273@gmail.com' && passwordIs =='123456') {
+                window.location.href = 'bank.html';
+            }else{
+                alert('incurrect email or password');
+            }
+        })
+    </script>
+</body>
+</html>

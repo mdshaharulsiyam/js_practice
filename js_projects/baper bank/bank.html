@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>baper bank</title>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@3.5.1/dist/full.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+    <main class="bg-sky-300 mx-auto my-14 text-center p-10 w-3/4">
+        <h2 class="text-2xl my-8">wellcome to your baper bank</h2>
+        <div class="grid grid-cols-3 gap-5">
+            <div class="hero bg-red-400">
+                <div class="hero-content text-center">
+                  <div class="max-w-md">
+                    <h1 class="text-xl font-bold">diposit</h1>
+                    <p class="py-6">$<span id="dipositamount">00</span></p>
+                  </div>
+                </div>
+              </div>
+              <div class="hero bg-base-200">
+                <div class="hero-content text-center">
+                  <div class="max-w-md">
+                    <h1 class="text-xl font-bold">withdrow</h1>
+                    <p class="py-6">$<span id="withdrowAmount">00</span></p>
+                  </div>
+                </div>
+              </div>
+              <div class="hero bg-amber-400">
+                <div class="hero-content text-center">
+                  <div class="max-w-md">
+                    <h1 class="text-xl font-bold">ballance</h1>
+                    <p class="py-6">$<span id="mainbalance">1200</span></p>
+                  </div>
+                </div>
+              </div>
+        </div>
+        <div class="grid grid-cols-2 gap-10">
+            <div class="text-center bg-orange-400 p-9 my-8">
+                <input id="newdipositamount" class="w-2/3 p-2 my-4 rounded" type="text" placeholder="please enter amount">
+                <button id="depositebtn" class="py-2 px-6 block mx-auto bg-emerald-200 text-xl rounded hover:bg-violet-500">diposit</button>
+            </div>
+            <div class="text-center bg-lime-300 p-9 my-8">
+                <input id="withdrowInput" class="w-2/3 p-2 my-4 rounded" type="text" placeholder="please enter amount">
+                <button id="withdrowbtn" class="py-2 px-6 block mx-auto bg-emerald-200 text-xl rounded hover:bg-violet-500">withdrow</button>
+            </div>
+        </div>
+    </main>
+    <script>
+        let diposit = document.querySelector('#depositebtn');
+        let mainBalance = document.querySelector('#mainbalance');
+        diposit.addEventListener('click',()=>{
+            let currentDipositAmount = Number(document.querySelector('#dipositamount').innerText);
+            let newDipositAmount = Number(document.querySelector('#newdipositamount').value);
+            document.querySelector('#newdipositamount').value = '';
+            if (newDipositAmount>0) {
+                currentDipositAmount += newDipositAmount;
+                document.querySelector('#dipositamount').innerText=currentDipositAmount;
+                mainBalanceNumber= Number(mainBalance.innerText);
+                mainBalanceNumber += newDipositAmount;
+                mainBalance.innerText=mainBalanceNumber
+            }else{
+                alert('invalid input')
+            }
+        })
+        let withdrowbtn = document.querySelector('#withdrowbtn');
+        withdrowbtn.addEventListener('click',()=>{
+            withdrowAmount = Number(document.querySelector('#withdrowInput').value);
+            totalWithdrowAmount =document.querySelector('#withdrowAmount');
+            document.querySelector('#withdrowInput').value='';
+            // if (withdrowAmount>0) {
+            //     totalWithdrowAmountnumber = Number(totalWithdrowAmount.innerText)
+            //     totalWithdrowAmountnumber += withdrowAmount;
+            //     totalWithdrowAmount.innerText =  totalWithdrowAmountnumber;
+            //     mainBalanceNumber= Number(mainBalance.innerText);
+            //     mainBalanceNumber -= withdrowAmount;
+            //     mainBalance.innerText=mainBalanceNumber;
+            // }
+            if(withdrowAmount>Number(mainBalance.innerText) && withdrowAmount>0){
+                alert('invalid amount')
+            }else if(withdrowAmount<=Number(mainBalance.innerText) && withdrowAmount>0){
+                totalWithdrowAmountnumber = Number(totalWithdrowAmount.innerText)
+                totalWithdrowAmountnumber += withdrowAmount;
+                totalWithdrowAmount.innerText =  totalWithdrowAmountnumber;
+                mainBalanceNumber= Number(mainBalance.innerText);
+                mainBalanceNumber -= withdrowAmount;
+                mainBalance.innerText=mainBalanceNumber;
+            }else{
+                alert('invalid input')
+            }
+        })
+    </script>
+</body>
+</html>

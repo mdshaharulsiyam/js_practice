@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<script>
+            class Siyam {
+            constructor(name, age, salery) {
+                this.studentname = name;
+                this.studentage = age;
+                this.salery = salery;
+            }
+        
+            helow() {
+                console.log(this.studentname + ', your age is ' + this.studentage + ' ' + this.salery);
+            }
+        
+            static staticmethod() {
+                console.log('static method');
+            }
+        }
+        
+        class Shaharul extends Siyam {
+            helow() {
+                let ta = 10;
+                let pa = 3;
+                let total = ta + pa + this.salery;
+                console.log(this.studentname + ', your age is ' + this.studentage + ' ' + total);
+            }
+        }
+        let a = new s.shaharul('Siyam', 21, 50);
+        let b = new s.Siyam('Siyam', 21, 50);
+
+        a.helow();
+        b.helow();
+</script>
+</body>
+</html>

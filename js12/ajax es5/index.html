@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button id="xml">click me</button>
+    <script>
+       btn = document.getElementById('xml');
+       btn.addEventListener('click', ()=>{
+            const xhr = new XMLHttpRequest();  // Create an instance of XMLHttpRequest
+            
+            xhr.onreadystatechange = function(){
+                if (this.readyState === 4 && this.status === 200) {
+                    console.log(this.responseText);
+                }else if(this.readyState === 4 && this.status === 404){
+                    console.log('404 not found')
+                }
+            };
+            
+            xhr.open('GET', 'https://jsonplaceholder.typicode.com/posts', true);  // Fix the filename to 'readme.txt'
+            xhr.send();
+       });
+    </script>
+</body>
+</html>

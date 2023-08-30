@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+function findAddress(obj) {
+    addresValues =[];
+    for (const key in obj) {
+        if (obj[key] == '') {
+            obj[key] = '__'
+        }
+        addresValues.push( obj[key])
+    }
+    addresValues = addresValues.join()
+    return addresValues;
+}
+
+    </script>
+</body>
+</html>

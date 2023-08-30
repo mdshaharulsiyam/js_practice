@@ -1,0 +1,40 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.slider_parent{
+    max-width: 950px;
+    margin: 200px auto;
+    overflow: hidden;
+    position: relative;
+}
+.slider{
+    display: flex;
+    gap: 25px;
+    overflow: hidden;
+}
+#slides_img{
+    width: 300px;
+    height: 300px;
+    flex-grow: 0;
+    flex-shrink: 0;
+}
+.icon {
+    width: 30px;
+    padding: 10px;
+    background: rgb(223, 221, 221);
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+}
+.icon#right{
+    right: 0;
+}
+.icon#left{
+    display: none;
+}
+.scrollBehave{
+    scroll-behavior: smooth;
+}
