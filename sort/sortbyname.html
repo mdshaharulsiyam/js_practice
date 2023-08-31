@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sorting Example</title>
+</head>
+<body>
+  <button id="sortButton">Sort</button>
+  <script>
+    const ary = [
+      { name: 'h1', price: 10 },
+      { name: 'h5', price: 3 },
+      { name: 'h7', price: 45 },
+      { name: 'h', price: 21 },
+      { name: 'h1', price: 4 },
+    ];
+
+    const sortButton = document.getElementById('sortButton');
+
+    sortButton.addEventListener('click', function() {
+      ary.sort(function(a, b) {
+        return a.name.localeCompare(b.name);
+      });
+
+      console.log(ary);
+    });
+  </script>
+</body>
+</html>

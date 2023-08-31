@@ -1,0 +1,31 @@
+#catagory{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    max-width: 500px;
+    margin: 40px auto;
+}
+#catagores{
+    list-style-type: none;
+    padding: 10px 20px;
+    background: rgb(192, 181, 181);
+    border-radius: 10px;
+    cursor: pointer;
+}
+#pages{
+    margin: 20px auto;
+}
+#pagebutton{
+padding: 10px 20px;
+background: rgb(231, 214, 214);
+margin: 0 10px;
+}
+.author{
+    width: 50px;
+    border-radius: 50%;
+}
+.modalDiv{
+    left: 50%;
+    transform: translateX(-50%);
+    /* transition: .4s ease all; */
+}

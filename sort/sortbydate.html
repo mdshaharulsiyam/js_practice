@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sorting Example</title>
+</head>
+<body>
+  <button id="sortButton">Sort by Date</button>
+  <script>
+    const ary = [
+      { name: 'h1', price: 10, date: '2023-08-01' },
+      { name: 'h5', price: 3, date: '2027-06-15' },
+      { name: 'h7', price: 45, date: '2023-08-10' },
+      { name: 'h', price: 21, date: '2023-08-05' },
+      { name: 'h1', price: 4, date: '2023-08-20' },
+    ];
+
+    const sortButton = document.getElementById('sortButton');
+
+    sortButton.addEventListener('click', function() {
+      ary.sort(function(a, b) {
+        return b.date.localeCompare(a.date);
+      });
+
+      console.log(ary);
+    });
+  </script>
+</body>
+</html>

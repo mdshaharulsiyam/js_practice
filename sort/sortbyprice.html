@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sorting Example</title>
+</head>
+<body>
+  <button id="sortLowToHigh">Sort low to high</button>
+  <button id="sortHighToLow">Sort high to low</button>
+  <script>
+    const ary = [
+      { name: 'h1', price: 10 },
+      { name: 'h5', price: 3 },
+      { name: 'h7', price: 45 },
+      { name: 'h', price: 21 },
+      { name: 'h1', price: 4 },
+    ];
+
+    const sortLowToHighButton = document.getElementById('sortLowToHigh');
+    const sortHighToLowButton = document.getElementById('sortHighToLow');
+
+    sortLowToHighButton.addEventListener('click', function() {
+      ary.sort(function(a, b) {
+        return a.price - b.price;
+      });
+
+      console.log(ary);
+    });
+
+    sortHighToLowButton.addEventListener('click', function() {
+      ary.sort(function(a, b) {
+        return b.price - a.price;
+      });
+
+      console.log(ary);
+    });
+  </script>
+</body>
+</html>
