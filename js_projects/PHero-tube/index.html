@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en" data-theme = "light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PH Tube</title>
+    <link rel="shortcut icon" href="fi_3039386.svg" type="image/x-icon">
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@3.6.2/dist/full.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap');
+  body{
+    font-family: 'Inter';
+  }
+  #active{
+    background: red;
+    color: wheat;
+    font-weight: 600;
+  }
+  #items{
+    cursor: pointer;
+  }
+</style>
+<body>
+    <header>
+        <div class="container mx-auto">
+            <div class=" sm:flex justify-between items-center my-8 mx-auto  text-center">
+                <img class="block mx-auto sm:m-0 sm:inline " src="Logo.png" alt="">
+                <button id="SortBtn" class="bg-[#D3D3D3] py-[10px] px-[20px] rounded-md text-lg">Sort by view</button>
+                <button id="Blog" onclick="my_modal.showModal()" class="bg-[#FF1F3D] py-[10px] px-[20px] rounded-md text-white text-lg">Blog</button>
+            </div>
+            <hr class="w-full h-[2px] bg-[#DEDEDE]">
+        </div>
+    </header>
+    <main class="mx-auto text-center">
+        <section class="my-11">
+            <div class="container mx-auto">
+               <!-- You can open the modal using ID.showModal() method -->
+                    <dialog id="my_modal" class="modal text-left">
+                    <form method="dialog" class="modal-box">
+                        <button class="btn btn-sm btn-circle btn-ghost absolute right-2 top-2">✕</button>
+                       <h3 class="font-bold text-lg"> Blog Question 01 : Discuss the scope of `var`, `let`, and `const`</h3><br>
+                        <span>answers------</span>
+                        <p class="py-4"><span class="font-extrabold">var:</span> <br>var are hoisted to the top of their containing function or global scope. This means you can access the variable before it's declared, but its value will be undefined until the actual declaration. <br><br>var can be redeclared within the same scope without any error. Additionally, they can be reassigned values freely.</p>
+
+                        <p class="py-4"><span class="font-extrabold">let:</span> <br>let are hoisted, but they are not initialized to a value until the declaration is reached during execution. Accessing them <br><br>let can be reassigned new values within their scope. They cannot be redeclared within the same block scope.</p>
+
+                        <p class="py-4"><span class="font-extrabold">const:</span> <br>const variables are hoisted, but they are not initialized to a value until the declaration is reached. Accessing them before declaration results in a ReferenceError. <br><br>const cannot be reassigned once they are assigned a value. This makes them suitable for defining constants or values that should not change.</p><br><br>
+                        <h3 class="font-bold text-lg"> Blog Question 02 : Tell us the use cases of `null` and `undefined`</h3><br>
+                        <span>answers------</span><br> <br>
+                        <p>Undefined means the variable has been declared, but its value has not been assigned. Null means an empty value or a blank value. The typeof() operator returns undefined for an undefined variable. The typeof() operator returns the type as an object for a variable whose value is assigned as null.</p>
+                        <h3 class="font-bold text-lg"> Blog Question 03 : Tell us the use cases of `null` and `undefined`</h3><br>
+                        <span>answers------</span><br> <br>
+                        <p>What is a REST API? An API, or application programming interface, is a set of rules that define how applications or devices can connect to and communicate with each other. A REST API is an API that conforms to the design principles of the REST, or representational state transfer architectural style.</p>
+                    </form>
+                    </dialog>
+                <div id="tab">
+                </div>
+                <div id="items" class="my-11 grid lg:grid-cols-4 sm:grid-cols-2 gap-6">
+
+                </div>
+                <div id="container" class="mx-auto">
+                        
+                </div>
+            </div>
+        </section>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>

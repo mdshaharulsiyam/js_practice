@@ -3,111 +3,103 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>pagination</title>
 </head>
-<style>
-    ul{
-        max-width: 800px;
-        text-align: center;
-        margin: 0 auto;
-    }
-    li{
-        list-style-type: none;
-        display: inline-block;
-        padding: 10px 30px;
-        background: rgb(173, 170, 170);
-    }
-</style>
 <body>
-    <div class="container">
-        <ul>
-            <li>list1</li>
-            <li>list2</li>
-            <li>list3</li>
-            <li>list4</li>
-            <li>list5</li>
-            <li>list6</li>
-            <li>list7</li>
-            <li>list8</li>
-            <li>list9</li>
-            <li>list10</li>
-            <li>list11</li>
-            <li>list12</li>
-            <li>list13</li>
-            <li>list14</li>
-            <li>list15</li>
-            <li>list16</li>
-            <li>list17</li>
-            <li>list18</li>
-            <li>list19</li>
-            <li>list20</li>
-            <li>list21</li>
-            <li>list22</li>
-            <li>list23</li>
-            <li>list24</li>
-            <li>list25</li>
-            <li>list26</li>
-            <li>list27</li>
-            <li>list28</li>
-            <li>list29</li>
-            <li>list30</li>
-            <li>list31</li>
-            <li>list32</li>
-            <li>list33</li>
-            <li>list34</li>
-            <li>list35</li>
-            <li>list36</li>
-            <li>list37</li>
-            <li>list38</li>
-            <li>list39</li>
-            <li>list40</li>
-            <li>list41</li>
-            <li>list42</li>
-            <li>list43</li>
-            <li>list44</li>
-            <li>list45</li>
-            <li>list46</li>
-            <li>list47</li>
-            <li>list48</li>
-            <li>list49</li>
-        </ul>
-    </div>
-    <script>
-        const itemsPerPage = 4;
-        const itemList = document.querySelectorAll('.container li');
-        const paginationContainer = document.createElement('div');
-        paginationContainer.className = 'pagination';
-    
-        const totalPages = Math.ceil(itemList.length / itemsPerPage);
-        console.log(totalPages)
-    
-        for (let i = 0; i < totalPages; i++) {
-            const paginationButton = document.createElement('button');
-            paginationButton.textContent = i + 1;
-            paginationButton.addEventListener('click', function() {
-                showPage(i);
-            });
-            paginationContainer.appendChild(paginationButton);
+    <style>
+        ul{
+            max-width: 800px;
+            text-align: center;
+            margin: 0 auto;
         }
-    
-        document.body.appendChild(paginationContainer);
-    
-        function showPage(pageNumber) {
-            const startIndex = pageNumber * itemsPerPage;
-            const endIndex = startIndex + itemsPerPage;
-    
-            itemList.forEach((item, index) => {
-                if (index >= startIndex && index < endIndex) {
+        li{
+            list-style-type: none;
+            display: inline-block;
+            padding: 10px 30px;
+            background: rgb(173, 170, 170);
+        }
+    </style>
+    <body>
+        <div class="container">
+            <ul>
+                <li>list1</li>
+                <li>list2</li>
+                <li>list3</li>
+                <li>list4</li>
+                <li>list5</li>
+                <li>list6</li>
+                <li>list7</li>
+                <li>list8</li>
+                <li>list9</li>
+                <li>list10</li>
+                <li>list11</li>
+                <li>list12</li>
+                <li>list13</li>
+                <li>list14</li>
+                <li>list15</li>
+                <li>list16</li>
+                <li>list17</li>
+                <li>list18</li>
+                <li>list19</li>
+                <li>list20</li>
+                <li>list21</li>
+                <li>list22</li>
+                <li>list23</li>
+                <li>list24</li>
+                <li>list25</li>
+                <li>list26</li>
+                <li>list27</li>
+                <li>list28</li>
+                <li>list29</li>
+                <li>list30</li>
+                <li>list31</li>
+                <li>list32</li>
+                <li>list33</li>
+                <li>list34</li>
+                <li>list35</li>
+                <li>list36</li>
+                <li>list37</li>
+                <li>list38</li>
+                <li>list39</li>
+                <li>list40</li>
+                <li>list41</li>
+                <li>list42</li>
+                <li>list43</li>
+                <li>list44</li>
+                <li>list45</li>
+                <li>list46</li>
+                <li>list47</li>
+                <li>list48</li>
+                <li>list49</li>
+            </ul>
+        </div>
+        <script>
+          let container = document.querySelector('.container');
+          let li = document.querySelectorAll('li');
+          let itemsPerPage = 6;
+          let paginationContainer = document.createElement('div');
+          let pageNumber = Math.ceil(li.length / itemsPerPage);
+          for (let i = 0; i < pageNumber; i++) {
+             let button = document.createElement('button');
+             button.innerText = i+1;
+             button.addEventListener('click',()=>{
+                showitem(i)
+             })
+             paginationContainer.appendChild(button);
+          }
+          container.appendChild(paginationContainer);
+          const showitem = pageNumbers =>{
+            let startIndex = pageNumbers * itemsPerPage;
+            let endIndex = startIndex + itemsPerPage;
+            li.forEach((item,index)=>{
+                if (index>=startIndex && index<=endIndex) {
                     item.style.display = 'inline-block';
-                } else {
+                }else{
                     item.style.display = 'none';
                 }
-            });
-        }
-    
-        // Show the first page initially
-        showPage(0);
-    </script>
-    
+            })
+          }
+          showitem(0)
+        </script>
 </body>
 </html>

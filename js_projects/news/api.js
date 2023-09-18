@@ -16,7 +16,6 @@ const showCatagory = (data) =>{
     catagory = document.getElementById('catagory');
     for (const datas of data) {
         li = document.createElement('li');
-        // catagory.innerHTML = `<li id="catagores" style="display: none;">${datas.category_name}</li>`
         li.setAttribute('id','catagores')
         li.setAttribute('onclick',`showDataOfCurrentData('${datas.category_id}')`)
         li.innerText = datas.category_name;
@@ -87,7 +86,7 @@ const showCatagory = (data) =>{
         let modalDiv = document.querySelector('.modalItem');
         let modalparent = document.querySelector('.modalDiv');
         modalDiv.innerHTML= '';
-        modalparent.addEventListener('click', ()=>{
+        modalparent.addEventListener('click', (e)=>{
             modalparent.style.top = '-9999999999px'
         })
 
@@ -101,8 +100,7 @@ const showCatagory = (data) =>{
         modalDiv.appendChild(div)
         modalparent.style.top = '30px'
        }
-    // pagination()
-// }, 200);
+ 
 
 // const showpage = (pagenumber)=>{
 //     const startindex = itemperpage * pagenumber;

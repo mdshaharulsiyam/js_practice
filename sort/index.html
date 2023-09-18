@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <ul>
+        <li>ajh</li>
+        <li>ffda</li>
+        <li>fgh</li>
+        <li>aas</li>
+        <li>dlk</li>
+        <li>uop</li>
+        <li>wert</li>
+        <li>cvcxd</li>
+        <li>ety</li>
+        <li>uykfd</li>
+
+    </ul>
+    <script>
+window.onload = ()=>{
+    ul = document.querySelector('ul');
+        li = document.querySelectorAll('li')
+        items = Array.from(li);
+        console.log(items)
+        items.sort((a,b)=>{
+            let ahead = a.innerText
+            let bhead = b.innerText
+            return ahead.localeCompare(bhead)
+        })
+        ul.innerHTML = '';
+        items.forEach(element => {
+            ul.appendChild(element);
+        });
+}
+    </script>
+</body>
+</html>
